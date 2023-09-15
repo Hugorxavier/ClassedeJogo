@@ -1,0 +1,35 @@
+import { log } from './logger'
+// Hugo Rodrigues Xavier 
+log('Import works!')
+
+class Heroi {
+  constructor(Nome,Idade,Tipo) {
+    this.Nome = Nome
+    this.Idade = Idade
+    this.Tipo = Tipo
+  }
+  Atacar(){
+     let ataque ;
+    if (this.Tipo == "mago") {
+      ataque = "magia";
+    } else if(this.Tipo == "Guerreiro" ){
+      ataque = "espada";
+    } if (this.Tipo == "monge") {
+      ataque = "artes marciais";
+    } else if (this.Tipo == "ninja") {
+      ataque = "shuriken";
+    }
+    console.log(` O ${this.Tipo} atacou usando ${ataque}`)
+  }
+  }
+
+
+let Adao = new Heroi('Adão',30,"ninja")
+let Noe = new Heroi('Noé',950,"monge")
+let Sansao = new Heroi('Sansão',45,"Guerreiro")
+let Ezequiel = new Heroi('Ezequiel',37,"mago")
+
+ Adao.Atacar();
+ Noe.Atacar();
+ Sansao.Atacar();
+ Ezequiel.Atacar();
